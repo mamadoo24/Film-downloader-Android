@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Film Downloader — Android"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:paddingBottom="8dp"/>
+
+    <EditText android:id="@+id/titleInput" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Titre *" android:singleLine="true"/>
+    <EditText android:id="@+id/yearInput" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Année (facultative)"
+        android:inputType="number" android:singleLine="true"/>
+    <EditText android:id="@+id/minInput" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Taille min. (ex. 2 Go)" android:singleLine="true"/>
+    <EditText android:id="@+id/maxInput" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Taille max. (ex. 4 Go)" android:singleLine="true"/>
+
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/openLoadix" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="1. Ouvrir Loadix"/>
+            <Button android:id="@+id/searchButton" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="2. Rechercher"/>
+            <Button android:id="@+id/captchaDone" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="CAPTCHA terminé"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView android:id="@+id/statusText" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connectez-vous manuellement à Loadix dans la vue ci-dessous."
+        android:padding="6dp"/>
+
+    <WebView android:id="@+id/webView" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1"/>
+
+</LinearLayout>
